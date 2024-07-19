@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://yk0xwhddtvdv"]
+
+[ext_resource type="Script" path="res://scenes/game.gd" id="1_vw31v"]
+[ext_resource type="PackedScene" uid="uid://cnvfcqqhax6hi" path="res://scenes/Top/top.tscn" id="2_b53b7"]
+[ext_resource type="PackedScene" uid="uid://bjvl3bygmsq1a" path="res://scenes/Misc/spawn_area.tscn" id="2_fa7aa"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_vw31v")
+
+[node name="Top" parent="." instance=ExtResource("2_b53b7")]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.763
+autostart = true
+
+[node name="SpawnArea" parent="." instance=ExtResource("2_fa7aa")]
+position = Vector2(1290, 175)
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
