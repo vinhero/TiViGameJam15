@@ -12,5 +12,6 @@ position = Vector2(10, -10)
 shape = SubResource("RectangleShape2D_8ni5c")
 
 [node name="SpawnIntervall" type="Timer" parent="."]
+autostart = true
 
 [connection signal="timeout" from="SpawnIntervall" to="." method="_on_spawn_intervall_timeout"]

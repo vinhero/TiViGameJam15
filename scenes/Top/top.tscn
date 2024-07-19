@@ -34,3 +34,6 @@ position = Vector2(72, 126)
 [node name="PotionSpawner" parent="." instance=ExtResource("4_54vlf")]
 position = Vector2(70, 84)
 script = ExtResource("5_s0c4p")
+
+[node name="Spawner" parent="." instance=ExtResource("4_54vlf")]
+position = Vector2(1299, 178)

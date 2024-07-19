@@ -98,5 +98,5 @@ position = Vector2(639, 404)
 scale = Vector2(1.93478, 1.93478)
 sprite_frames = SubResource("SpriteFrames_uiltv")
 autoplay = "default"
-frame_progress = 0.445556
+frame_progress = 0.577184
 script = SubResource("GDScript_duwpe")
