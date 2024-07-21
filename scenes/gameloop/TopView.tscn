@@ -31,4 +31,4 @@ layer_0/tile_data = PackedInt32Array(0, 1, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0)
 position = Vector2(72, 126)
 
 [node name="Spawner" parent="." instance=ExtResource("4_54vlf")]
-position = Vector2(1300, 175)
+position = Vector2(1292, 176)

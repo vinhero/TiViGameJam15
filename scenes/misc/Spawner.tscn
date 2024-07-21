@@ -11,6 +11,7 @@ script = ExtResource("1_w40nc")
 shape = SubResource("RectangleShape2D_xba1q")
 
 [node name="SpawnIntervall" type="Timer" parent="."]
+wait_time = 2.0
 autostart = true
 
 [connection signal="timeout" from="SpawnIntervall" to="." method="_on_spawn_intervall_timeout"]

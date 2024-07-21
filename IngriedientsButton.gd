@@ -1,6 +1,8 @@
 class_name IngridientsButton
 extends TextureButton
 
+signal detailed_pressed(type: int)
+
 @export var btnType = ENUMS.Ingridients.NONE
 
 func _init(type: String):
@@ -13,6 +15,8 @@ func _init(type: String):
 func _ready():
 	pass # Replace with function body.
 
+func _pressed():
+	detailed_pressed.emit(btnType)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
