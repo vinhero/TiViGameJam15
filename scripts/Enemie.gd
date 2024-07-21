@@ -1,13 +1,14 @@
 class_name Enemie
 extends AnimatedSprite2D
 
+const DIE_ANIMATION : String = "die"
+const WALK_ANIMATION : String = "walk"
+
 @export var direction = -1
 @export var MaxCryptonites = 3
 @export var speed = 60
 
 var arrCryptonite: Array[int]
-
-signal hasDied
 
 func setCryptonite():
 	for i in range(0, MaxCryptonites):
@@ -24,18 +25,16 @@ func setCryptonite():
 func kill():
 	speed = 0
 	animation = "die"
-	animation_finished.connect(on_has_died)
-	queue_free()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	setCryptonite()
-	pass # Replace with function body.
-
+	animation_looped.connect(on_has_died)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	position.x += delta * speed * direction
 
 func on_has_died():
-	print("finally")
+	if (animation == "die"):
+		get_parent().queue_free()

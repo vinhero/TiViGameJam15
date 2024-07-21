@@ -15,7 +15,6 @@ func spawn():
 	EnemieCounter += 1
 	var spawnedEnemy = Enemy.instantiate()
 	arrEnemies.append(spawnedEnemy)
-	#((spawnedEnemy as Node2D).get_child(0) as Slime).hasDied.connect(on_enemie_died)
 	top.add_child.call_deferred(spawnedEnemy)
 	spawnedEnemy.position = $".".position
 

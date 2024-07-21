@@ -6,7 +6,6 @@ signal queue_full(queue: Array[int])
 var arrButtons : Array[IngridientsButton]
 var arrCurrentQueue : Array[int]
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	for ingridient in ENUMS.Ingridients.keys():
