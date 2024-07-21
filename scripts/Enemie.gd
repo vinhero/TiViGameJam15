@@ -24,6 +24,8 @@ func setCryptonite():
 func kill():
 	speed = 0
 	animation = "die"
+	animation_finished.connect(on_has_died)
+	queue_free()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -34,3 +36,6 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	position.x += delta * speed * direction
+
+func on_has_died():
+	print("finally")
