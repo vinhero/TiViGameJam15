@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://cnvfcqqhax6hi"]
+[gd_scene load_steps=9 format=3 uid="uid://cnvfcqqhax6hi"]
 
 [ext_resource type="Texture2D" uid="uid://ckgokujwa2tl2" path="res://img/background/Background_Fighting_Area3x.png" id="1_h0koa"]
+[ext_resource type="Script" path="res://scripts/TopView.gd" id="1_xpgoi"]
 [ext_resource type="Texture2D" uid="uid://bbegxuwkh7ewo" path="res://img/background/Alchemist_Tower3x.png" id="2_qbd0y"]
 [ext_resource type="PackedScene" uid="uid://dxul1i7qel5eb" path="res://scenes/misc/Alchemist.tscn" id="3_irohb"]
 [ext_resource type="PackedScene" uid="uid://cyb7aww7kp38o" path="res://scenes/misc/Spawner.tscn" id="4_54vlf"]
@@ -20,7 +21,8 @@ tile_size = Vector2i(384, 207)
 sources/0 = SubResource("TileSetAtlasSource_fhjm5")
 sources/1 = SubResource("TileSetAtlasSource_xbhns")
 
-[node name="Top" type="Node2D"]
+[node name="TopView" type="Node2D"]
+script = ExtResource("1_xpgoi")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_6030w")
@@ -32,3 +34,6 @@ position = Vector2(72, 126)
 
 [node name="Spawner" parent="." instance=ExtResource("4_54vlf")]
 position = Vector2(1292, 176)
+
+[connection signal="hasDied" from="Alchemist" to="." method="_on_alchemist_has_died"]
+[connection signal="alchemist_hit" from="Spawner" to="." method="_on_spawner_alchemist_hit"]

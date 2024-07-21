@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://yk0xwhddtvdv"]
+[gd_scene load_steps=4 format=3 uid="uid://yk0xwhddtvdv"]
 
 [ext_resource type="Script" path="res://scripts/GameMaster.gd" id="1_3onj2"]
 [ext_resource type="PackedScene" uid="uid://cnvfcqqhax6hi" path="res://scenes/gameloop/TopView.tscn" id="2_wbco8"]
 [ext_resource type="PackedScene" uid="uid://cd1nlmj68a3qg" path="res://scenes/gameloop/BottomView.tscn" id="3_oaxxn"]
-[ext_resource type="Script" path="res://scripts/TopView.gd" id="4_fb2yc"]
 
 [node name="GameLoop" type="Node2D"]
 script = ExtResource("1_3onj2")
@@ -13,6 +12,6 @@ position = Vector2(-1, 175)
 arrButtonCoordinates = Array[Vector2]([Vector2(465, 135), Vector2(565, 135), Vector2(665, 135), Vector2(765, 135), Vector2(410, 210), Vector2(820, 210)])
 
 [node name="Top" parent="." instance=ExtResource("2_wbco8")]
-script = ExtResource("4_fb2yc")
 
 [connection signal="queue_full" from="Boiler" to="Top" method="_on_boiler_queue_full"]
+[connection signal="alchemist_has_died" from="Top" to="." method="_on_top_alchemist_has_died"]

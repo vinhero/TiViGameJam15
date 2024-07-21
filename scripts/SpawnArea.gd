@@ -8,6 +8,8 @@ var EnemiePath = "res://scenes/enemies/%s.tscn"
 var Enemy = load(EnemiePath % EnemieName)
 @onready var top = get_tree().get_root()
 
+signal alchemist_hit
+
 func setCryptonite():
 	pass
 	
@@ -15,8 +17,11 @@ func spawn():
 	EnemieCounter += 1
 	var spawnedEnemy = Enemy.instantiate()
 	arrEnemies.append(spawnedEnemy)
-	top.add_child.call_deferred(spawnedEnemy)
 	spawnedEnemy.position = $".".position
+	var enemieClass = (spawnedEnemy.get_child(0) as Enemie)
+	enemieClass.attacked_alchemist.connect(on_alchemist_hit)
+	enemieClass.has_died.connect(on_enemie_died)
+	top.add_child.call_deferred(spawnedEnemy)
 
 func _on_spawn_intervall_timeout():
 	spawn()
@@ -29,5 +34,12 @@ func kill_nearest(queue: Array[int]):
 
 func kill_enemies(enemiesToKill: Array[Node2D]):
 	for enemie in enemiesToKill:
-		arrEnemies.erase(enemie)
 		(enemie.get_child(0) as Enemie).kill()
+
+func on_enemie_died(enemie: Enemie):
+	var parent = enemie.get_parent()
+	arrEnemies.erase(parent)
+	parent.queue_free()
+
+func on_alchemist_hit():
+	alchemist_hit.emit()

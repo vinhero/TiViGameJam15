@@ -3,16 +3,17 @@
 [ext_resource type="Script" path="res://scripts/Alchemist.gd" id="1_aipuv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0t4u2"]
-size = Vector2(51, 94)
+size = Vector2(51, 87)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7vxmb"]
 
 [node name="Alchemist" type="Node2D"]
-
-[node name="Hitbox" type="Area2D" parent="."]
 script = ExtResource("1_aipuv")
 
+[node name="Hitbox" type="Area2D" parent="."]
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(0, 3.5)
 shape = SubResource("RectangleShape2D_0t4u2")
 
 [node name="PotionThrower" type="Area2D" parent="."]
