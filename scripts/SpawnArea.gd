@@ -23,11 +23,11 @@ func _on_spawn_intervall_timeout():
 
 func kill_nearest(queue: Array[int]):
 	if (arrEnemies.size() > 0):
-		var dieEnemies = arrEnemies.filter(func(e): return (e.get_children()[0] as Slime).arrCryptonite == queue)
+		var dieEnemies = arrEnemies.filter(func(e): return (e.get_children()[0] as Enemie).arrCryptonite == queue)
 		if (dieEnemies.size() > 0):
 			kill_enemies([dieEnemies[0]])
 
 func kill_enemies(enemiesToKill: Array[Node2D]):
 	for enemie in enemiesToKill:
 		arrEnemies.erase(enemie)
-		(enemie.get_child(0) as Slime).kill()
+		(enemie.get_child(0) as Enemie).kill()
