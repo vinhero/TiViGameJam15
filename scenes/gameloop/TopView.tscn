@@ -1,0 +1,34 @@
+[gd_scene load_steps=8 format=3 uid="uid://cnvfcqqhax6hi"]
+
+[ext_resource type="Texture2D" uid="uid://ckgokujwa2tl2" path="res://img/background/Background_Fighting_Area3x.png" id="1_h0koa"]
+[ext_resource type="Texture2D" uid="uid://bbegxuwkh7ewo" path="res://img/background/Alchemist_Tower3x.png" id="2_qbd0y"]
+[ext_resource type="PackedScene" uid="uid://dxul1i7qel5eb" path="res://scenes/misc/Alchemist.tscn" id="3_irohb"]
+[ext_resource type="PackedScene" uid="uid://cyb7aww7kp38o" path="res://scenes/misc/Spawner.tscn" id="4_54vlf"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fhjm5"]
+texture = ExtResource("1_h0koa")
+texture_region_size = Vector2i(384, 207)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xbhns"]
+texture = ExtResource("2_qbd0y")
+texture_region_size = Vector2i(384, 207)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_6030w"]
+tile_size = Vector2i(384, 207)
+sources/0 = SubResource("TileSetAtlasSource_fhjm5")
+sources/1 = SubResource("TileSetAtlasSource_xbhns")
+
+[node name="Top" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_6030w")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 1, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0)
+
+[node name="Alchemist" parent="." instance=ExtResource("3_irohb")]
+position = Vector2(72, 126)
+
+[node name="Spawner" parent="." instance=ExtResource("4_54vlf")]
+position = Vector2(1300, 175)

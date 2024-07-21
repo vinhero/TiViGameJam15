@@ -1,0 +1,18 @@
+extends Node
+
+enum Ingridients 
+{ 
+	MONDBLUME, 
+	NACHTESSENZ, 
+	PHOENIXFEDER, 
+	SCHATTENPILZ, 
+	DRACHENBLUT, 
+	ELFENKRISTAL,
+	NONE
+}
+
+enum Enemies {
+	SLIME,
+	GHOST,
+	NONE
+}

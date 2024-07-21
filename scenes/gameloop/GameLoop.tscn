@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://yk0xwhddtvdv"]
+
+[ext_resource type="Script" path="res://scripts/GameMaster.gd" id="1_3onj2"]
+[ext_resource type="PackedScene" uid="uid://cnvfcqqhax6hi" path="res://scenes/gameloop/TopView.tscn" id="2_wbco8"]
+[ext_resource type="PackedScene" uid="uid://cd1nlmj68a3qg" path="res://scenes/gameloop/BottomView.tscn" id="3_oaxxn"]
+
+[node name="GameLoop" type="Node2D"]
+script = ExtResource("1_3onj2")
+
+[node name="Boiler" parent="." instance=ExtResource("3_oaxxn")]
+position = Vector2(-1, 175)
+
+[node name="Top" parent="." instance=ExtResource("2_wbco8")]

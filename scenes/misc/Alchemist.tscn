@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxul1i7qel5eb"]
+
+[ext_resource type="Script" path="res://scripts/Alchemist.gd" id="1_aipuv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0t4u2"]
+size = Vector2(51, 94)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7vxmb"]
+
+[node name="Alchemist" type="Node2D"]
+
+[node name="Hitbox" type="Area2D" parent="."]
+script = ExtResource("1_aipuv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource("RectangleShape2D_0t4u2")
+
+[node name="PotionThrower" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PotionThrower"]
+position = Vector2(8, -52)
+shape = SubResource("RectangleShape2D_7vxmb")

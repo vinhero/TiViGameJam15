@@ -1,0 +1,96 @@
+[gd_scene load_steps=17 format=3 uid="uid://cd1nlmj68a3qg"]
+
+[ext_resource type="Texture2D" uid="uid://up0qy0rbjdw3" path="res://img/background/Alchemist_Tower-Insight.png" id="1_o2ydm"]
+[ext_resource type="Texture2D" uid="uid://b2b5bs6gkt4nc" path="res://img/sprites/ingridients/Mondblume.png" id="2_el7cv"]
+[ext_resource type="Texture2D" uid="uid://c6np3qgqdv8e2" path="res://img/sprites/ingridients/Nachtessens.png" id="3_054e0"]
+[ext_resource type="Texture2D" uid="uid://b7s2uameta6tv" path="res://img/sprites/ingridients/Phonix_Feder.png" id="4_j5pgm"]
+[ext_resource type="Texture2D" uid="uid://x2cuxqqh8cer" path="res://img/sprites/ingridients/Schattenpilz.png" id="5_bmxts"]
+[ext_resource type="Texture2D" uid="uid://8l22gh6onjng" path="res://img/sprites/ingridients/Drachenblut.png" id="6_gfwm5"]
+[ext_resource type="Texture2D" uid="uid://ct675r58rdbod" path="res://img/sprites/ingridients/Elfenkristal.png" id="7_2lmju"]
+[ext_resource type="Texture2D" path="res://img/sprites/Potion_Blue__Animation_PNG1.png" id="8_mm20v"]
+[ext_resource type="Texture2D" path="res://img/sprites/Potion_Blue__Animation_PNG2.png" id="9_gwydm"]
+[ext_resource type="Texture2D" path="res://img/sprites/Potion_Blue__Animation_PNG3.png" id="10_si7am"]
+[ext_resource type="Texture2D" path="res://img/sprites/Potion_Blue__Animation_PNG4.png" id="11_8ouli"]
+[ext_resource type="Texture2D" path="res://img/sprites/Potion_Blue__Animation_PNG5.png" id="12_515wu"]
+[ext_resource type="Texture2D" path="res://img/sprites/Potion_Blue__Animation_PNG6.png" id="13_kr1ap"]
+[ext_resource type="Texture2D" path="res://img/sprites/Potion_Blue__Animation_PNG7.png" id="14_1c8m5"]
+[ext_resource type="Texture2D" path="res://img/sprites/Potion_Blue__Animation_PNG8.png" id="15_8ikp6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uiltv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_mm20v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_gwydm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_si7am")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_8ouli")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_515wu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_kr1ap")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_1c8m5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_8ikp6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_8ikp6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="boiler" type="Node2D"]
+
+[node name="AlchemistTower-insight" type="Sprite2D" parent="."]
+position = Vector2(640.501, 274.999)
+scale = Vector2(2.00469, 1.53333)
+texture = ExtResource("1_o2ydm")
+
+[node name="Mondblume" type="Sprite2D" parent="."]
+position = Vector2(488.501, 161.999)
+scale = Vector2(0.614583, 0.614583)
+texture = ExtResource("2_el7cv")
+
+[node name="Nachtessens" type="Sprite2D" parent="."]
+position = Vector2(696.501, 162.999)
+scale = Vector2(0.635417, 0.635417)
+texture = ExtResource("3_054e0")
+
+[node name="PhonixFeder" type="Sprite2D" parent="."]
+position = Vector2(796.501, 163.999)
+scale = Vector2(0.65625, 0.65625)
+texture = ExtResource("4_j5pgm")
+
+[node name="Schattenpilz" type="Sprite2D" parent="."]
+position = Vector2(412.501, 237.999)
+scale = Vector2(0.635417, 0.635417)
+texture = ExtResource("5_bmxts")
+
+[node name="Drachenblut" type="Sprite2D" parent="."]
+position = Vector2(587.501, 157.999)
+scale = Vector2(0.708333, 0.708333)
+texture = ExtResource("6_gfwm5")
+
+[node name="Elfenkristal" type="Sprite2D" parent="."]
+position = Vector2(866.501, 236.999)
+scale = Vector2(0.614583, 0.614583)
+texture = ExtResource("7_2lmju")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(644, 235)
+scale = Vector2(1.93478, 1.93478)
+sprite_frames = SubResource("SpriteFrames_uiltv")
+autoplay = "default"
+frame_progress = 0.166463
