@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ct675r58rdbod"
-path="res://.godot/imported/Elfenkristal.png-2b789d7e056f457720a0fae7c3b6c2d1.ctex"
+path="res://.godot/imported/elfenkristal.png-b2e12d1c7a3472fa7ede241e0196b576.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/sprites/ingridients/Elfenkristal.png"
-dest_files=["res://.godot/imported/Elfenkristal.png-2b789d7e056f457720a0fae7c3b6c2d1.ctex"]
+source_file="res://img/sprites/ingridients/elfenkristal.png"
+dest_files=["res://.godot/imported/elfenkristal.png-b2e12d1c7a3472fa7ede241e0196b576.ctex"]
 
 [params]
 

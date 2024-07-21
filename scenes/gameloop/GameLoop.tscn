@@ -9,5 +9,6 @@ script = ExtResource("1_3onj2")
 
 [node name="Boiler" parent="." instance=ExtResource("3_oaxxn")]
 position = Vector2(-1, 175)
+arrButtonCoordinates = Array[Vector2]([Vector2(465, 135), Vector2(565, 135), Vector2(665, 135), Vector2(765, 135), Vector2(410, 210), Vector2(820, 210)])
 
 [node name="Top" parent="." instance=ExtResource("2_wbco8")]

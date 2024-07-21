@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://x2cuxqqh8cer"
-path="res://.godot/imported/schattenpilz.png-16bfe0034320a36d9e0f8ebab424c220.ctex"
+uid="uid://b7s2uameta6tv"
+path="res://.godot/imported/phoenixfeder.png-ad72b8e75867603729c0e71914ba157f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/sprites/ingridients/schattenpilz.png"
-dest_files=["res://.godot/imported/schattenpilz.png-16bfe0034320a36d9e0f8ebab424c220.ctex"]
+source_file="res://img/sprites/ingridients/phoenixfeder.png"
+dest_files=["res://.godot/imported/phoenixfeder.png-ad72b8e75867603729c0e71914ba157f.ctex"]
 
 [params]
 

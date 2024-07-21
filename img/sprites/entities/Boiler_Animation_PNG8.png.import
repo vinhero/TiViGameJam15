@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7s2uameta6tv"
-path="res://.godot/imported/Phonix_Feder.png-8ad44b4a1deb72477820195533a3704d.ctex"
+uid="uid://uykbgo5yhqdb"
+path="res://.godot/imported/Boiler_Animation_PNG8.png-5578271b7bd19bb3a97290c17d5e1412.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/sprites/ingridients/Phonix_Feder.png"
-dest_files=["res://.godot/imported/Phonix_Feder.png-8ad44b4a1deb72477820195533a3704d.ctex"]
+source_file="res://img/sprites/entities/Boiler_Animation_PNG8.png"
+dest_files=["res://.godot/imported/Boiler_Animation_PNG8.png-5578271b7bd19bb3a97290c17d5e1412.ctex"]
 
 [params]
 

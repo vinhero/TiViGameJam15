@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b2b5bs6gkt4nc"
-path="res://.godot/imported/Mondblume.png-a719e850ada7a0e733e006e6b3a3bdb2.ctex"
+path="res://.godot/imported/mondblume.png-9a4eac2442a5556b496289a2eae964cc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/sprites/ingridients/Mondblume.png"
-dest_files=["res://.godot/imported/Mondblume.png-a719e850ada7a0e733e006e6b3a3bdb2.ctex"]
+source_file="res://img/sprites/ingridients/mondblume.png"
+dest_files=["res://.godot/imported/mondblume.png-9a4eac2442a5556b496289a2eae964cc.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://x2cuxqqh8cer"
-path="res://.godot/imported/schattenpilz.png-16bfe0034320a36d9e0f8ebab424c220.ctex"
+uid="uid://kns6wahn3jje"
+path="res://.godot/imported/Boiler_Animation_PNG7.png-3794a2287f97c4bcec6272a6cdb066be.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/sprites/ingridients/schattenpilz.png"
-dest_files=["res://.godot/imported/schattenpilz.png-16bfe0034320a36d9e0f8ebab424c220.ctex"]
+source_file="res://img/sprites/entities/Boiler_Animation_PNG7.png"
+dest_files=["res://.godot/imported/Boiler_Animation_PNG7.png-3794a2287f97c4bcec6272a6cdb066be.ctex"]
 
 [params]
 
