@@ -1,7 +1,7 @@
 class_name Alchemist
 extends Area2D
 
-var Healthpoints := 3
+var Healthpoints : int = 3
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

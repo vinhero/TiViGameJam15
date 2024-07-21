@@ -1,0 +1,60 @@
+[gd_scene load_steps=11 format=3 uid="uid://bnp8rgqv1wmlv"]
+
+[ext_resource type="Texture2D" uid="uid://j1pjy27xeuft" path="res://img/sprites/entities/Ghost__Animation1.png" id="1_ngi23"]
+[ext_resource type="Texture2D" uid="uid://fhkyn6n6ko1k" path="res://img/sprites/entities/Ghost__Animation2.png" id="2_sxfwo"]
+[ext_resource type="Texture2D" uid="uid://dm332pep0yssm" path="res://img/sprites/entities/Ghost__Animation3.png" id="3_yvlkn"]
+[ext_resource type="Texture2D" uid="uid://b87ju10nqicv2" path="res://img/sprites/entities/Ghost__Animation4.png" id="4_v514a"]
+[ext_resource type="Texture2D" uid="uid://5ayd3hej7eks" path="res://img/sprites/entities/Ghost__Animation5.png" id="5_2dp62"]
+[ext_resource type="Texture2D" uid="uid://dc2bou32w7px0" path="res://img/sprites/entities/Ghost__Animation6.png" id="6_tjxfa"]
+[ext_resource type="Texture2D" uid="uid://cujljagvle7qk" path="res://img/sprites/entities/Ghost__Animation7.png" id="7_dwnwn"]
+[ext_resource type="Texture2D" uid="uid://boennaa2wddmn" path="res://img/sprites/entities/Ghost__Animation8.png" id="8_xtulr"]
+[ext_resource type="Script" path="res://scripts/Ghost.gd" id="9_nhx50"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kwufs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ngi23")
+}],
+"loop": true,
+"name": &"die",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ngi23")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_sxfwo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_yvlkn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_v514a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_2dp62")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_tjxfa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_dwnwn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_xtulr")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 7.0
+}]
+
+[node name="Ghost" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, -40)
+sprite_frames = SubResource("SpriteFrames_kwufs")
+animation = &"die"
+autoplay = "walk"
+script = ExtResource("9_nhx50")

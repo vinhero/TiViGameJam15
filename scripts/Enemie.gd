@@ -24,7 +24,7 @@ func setCryptonite():
 
 func kill():
 	speed = 0
-	animation = "die"
+	animation = DIE_ANIMATION
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -36,5 +36,5 @@ func _process(delta):
 	position.x += delta * speed * direction
 
 func on_has_died():
-	if (animation == "die"):
+	if (animation == DIE_ANIMATION):
 		get_parent().queue_free()
