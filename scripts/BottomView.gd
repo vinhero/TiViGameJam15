@@ -18,10 +18,12 @@ func _ready():
 
 func onIngridientsPressed(type: int):
 	arrCurrentQueue.append(type)
+	$QueueBar.set_queue(arrCurrentQueue)
 	if (arrCurrentQueue.size() == 3):
 		var currentQueue = arrCurrentQueue
 		queue_full.emit(currentQueue)
 		arrCurrentQueue.clear()
+		$QueueBar.delete_icons()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

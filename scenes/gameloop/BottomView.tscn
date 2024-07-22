@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cd1nlmj68a3qg"]
+[gd_scene load_steps=13 format=3 uid="uid://cd1nlmj68a3qg"]
 
 [ext_resource type="Texture2D" uid="uid://up0qy0rbjdw3" path="res://img/background/Alchemist_Tower-Insight.png" id="1_o2ydm"]
 [ext_resource type="Script" path="res://scripts/BottomView.gd" id="1_ti080"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://e7sfsaw7347m" path="res://img/sprites/entities/Boiler_Animation_PNG6.png" id="8_p1dco"]
 [ext_resource type="Texture2D" uid="uid://kns6wahn3jje" path="res://img/sprites/entities/Boiler_Animation_PNG7.png" id="9_47cbo"]
 [ext_resource type="Texture2D" uid="uid://uykbgo5yhqdb" path="res://img/sprites/entities/Boiler_Animation_PNG8.png" id="10_km1f2"]
+[ext_resource type="PackedScene" uid="uid://biljcfndbqqge" path="res://scenes/misc/queuebar.tscn" id="11_3cecs"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_a3jew"]
 animations = [{
@@ -57,3 +58,6 @@ scale = Vector2(1.8744, 1.8744)
 sprite_frames = SubResource("SpriteFrames_a3jew")
 autoplay = "default"
 frame_progress = 0.688145
+
+[node name="QueueBar" parent="." instance=ExtResource("11_3cecs")]
+position = Vector2(538, 443)
