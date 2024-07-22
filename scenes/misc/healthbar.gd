@@ -25,15 +25,15 @@ func delete_hearts():
 	arrHearts.clear()
 
 func destroy_heart():
-	var destroyed_heart : AnimatedSprite2D = arrHearts[arrHearts.size()-1]
-	arrHearts.erase(destroyed_heart)
-	destroyed_heart.queue_free()
+	if (arrHearts.size() > 0):
+		var destroyed_heart : AnimatedSprite2D = arrHearts[arrHearts.size()-1]
+		arrHearts.erase(destroyed_heart)
+		destroyed_heart.queue_free()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	set_hearts(Healthpoints)
 	pass
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
