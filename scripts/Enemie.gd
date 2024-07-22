@@ -7,7 +7,7 @@ const WALK_ANIMATION : String = "walk"
 @export var safety_offset : int = 10
 @export var direction = -1
 @export var MaxCryptonites = 3
-@export var speed = 600
+@export var speed = 60
 
 signal attacked_alchemist
 signal has_died(enemie: Enemie)

@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dxul1i7qel5eb"]
+[gd_scene load_steps=5 format=3 uid="uid://dxul1i7qel5eb"]
 
 [ext_resource type="Script" path="res://scripts/Alchemist.gd" id="1_aipuv"]
+[ext_resource type="PackedScene" uid="uid://56buleudif2v" path="res://scenes/misc/healthbar.tscn" id="2_rcd04"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0t4u2"]
 size = Vector2(51, 87)
@@ -21,3 +22,6 @@ shape = SubResource("RectangleShape2D_0t4u2")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PotionThrower"]
 position = Vector2(8, -52)
 shape = SubResource("RectangleShape2D_7vxmb")
+
+[node name="healthbar" parent="." instance=ExtResource("2_rcd04")]
+position = Vector2(-60, -94)
