@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://56buleudif2v"]
 
-[ext_resource type="Script" path="res://scenes/misc/healthbar.gd" id="1_7gqtk"]
+[ext_resource type="Script" path="res://scripts/healthbar.gd" id="1_7gqtk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fmg1m"]
 size = Vector2(117, 20)

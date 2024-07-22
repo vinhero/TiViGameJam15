@@ -35,5 +35,5 @@ position = Vector2(72, 126)
 [node name="Spawner" parent="." instance=ExtResource("4_54vlf")]
 position = Vector2(1292, 176)
 
-[connection signal="hasDied" from="Alchemist" to="." method="_on_alchemist_has_died"]
+[connection signal="has_died" from="Alchemist" to="." method="_on_alchemist_has_died"]
 [connection signal="alchemist_hit" from="Spawner" to="." method="_on_spawner_alchemist_hit"]
