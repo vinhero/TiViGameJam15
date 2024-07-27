@@ -5,6 +5,8 @@ var Healthpoints : int = 5
 var Kombo : int = 0
 
 @onready var top = get_tree().get_root()
+const potion = preload("res://scenes/misc/Potion.tscn")
+#const potion = preload("res://scripts/potion.gd")
 
 signal has_died
 
@@ -21,6 +23,15 @@ func receive_damage():
 func _ready():
 	$healthbar.set_hearts(Healthpoints)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	# just testpurpose
+	#if (Input.is_action_pressed("Kill Enemie")):
+		#throw_potion_at(Enemie.new())
 	pass
+
+func throw_potion_at(target: Enemie):
+	Input.action_press("Kill Enemie")
+	var thrown_potion = potion.instantiate() 
+	thrown_potion.set_target(target)
+	thrown_potion.position = $PotionThrower/CollisionShape2D.global_position
+	get_parent().add_child(thrown_potion)

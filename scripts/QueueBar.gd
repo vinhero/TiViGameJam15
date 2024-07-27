@@ -1,5 +1,7 @@
 extends Area2D
 
+const INGRIDIENTS_PATH : String = "res://img/sprites/ingridients/%s.png"
+
 var arr_current_queue : Array[int]
 var arr_current_icons : Array[TextureRect]
 
@@ -16,7 +18,7 @@ func draw_icons():
 		var nIngridient : int = arr_current_queue[i]
 		var strIngrdient : String = ENUMS.Ingridients.keys()[nIngridient]
 		var ingridients_rect : TextureRect = TextureRect.new()
-		ingridients_rect.texture = load("res://img/sprites/ingridients/%s.png" % strIngrdient.to_lower())
+		ingridients_rect.texture = load(INGRIDIENTS_PATH % strIngrdient.to_lower())
 		ingridients_rect.scale = Vector2(0.45, 0.45)
 		ingridients_rect.position = Vector2(next_x_position, 0)
 		add_child(ingridients_rect)
@@ -31,8 +33,3 @@ func delete_icons():
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass

@@ -1,6 +1,8 @@
 class_name IngridientsButton
 extends TextureButton
 
+const INGRIDIENTS_PATH : String = "res://img/sprites/ingridients/%s.png"
+
 signal detailed_pressed(type: int)
 
 @export var btnType = ENUMS.Ingridients.NONE
@@ -8,7 +10,7 @@ signal detailed_pressed(type: int)
 func _init(type: String):
 	btnType = ENUMS.Ingridients.get(type)
 	if (btnType != ENUMS.Ingridients.NONE):
-		texture_normal = load("res://img/sprites/ingridients/%s.png" % type.to_lower())
+		texture_normal = load(INGRIDIENTS_PATH % type.to_lower())
 		scale = Vector2(0.65, 0.65)
 
 # Called when the node enters the scene tree for the first time.
@@ -17,7 +19,3 @@ func _ready():
 
 func _pressed():
 	detailed_pressed.emit(btnType)
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
