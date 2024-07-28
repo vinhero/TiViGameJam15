@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://x3hyhklqp6tl"
-path="res://.godot/imported/rautegelb.png-ecadf98366607cf2362dae075b228330.ctex"
+uid="uid://btnifd8u1l2k5"
+path="res://.godot/imported/Alchemie_Buch2.png-b5dce667d9a6adbdc8875112f5b1e9d4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/sprites/ingridients/rautegelb.png"
-dest_files=["res://.godot/imported/rautegelb.png-ecadf98366607cf2362dae075b228330.ctex"]
+source_file="res://img/Alchemie_Buch2.png"
+dest_files=["res://.godot/imported/Alchemie_Buch2.png-b5dce667d9a6adbdc8875112f5b1e9d4.ctex"]
 
 [params]
 

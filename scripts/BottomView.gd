@@ -6,6 +6,8 @@ signal queue_full(queue: Array[int])
 var arrButtons : Array[IngridientsButton]
 var arrCurrentQueue : Array[int]
 
+var arrMiniSlimeSpawns = [$Mirror/Area2D, $Mirror/Area2D2, $Mirror/Area2D3, $Mirror/Area2D4, $Mirror/Area2D5, $Mirror/Area2D6, $Mirror/Area2D7]
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#for ingridient in ENUMS.Ingridients.keys():

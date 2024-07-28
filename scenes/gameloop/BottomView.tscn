@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cd1nlmj68a3qg"]
+[gd_scene load_steps=21 format=3 uid="uid://cd1nlmj68a3qg"]
 
 [ext_resource type="Texture2D" uid="uid://up0qy0rbjdw3" path="res://img/background/Alchemist_Tower-Insight.png" id="1_o2ydm"]
 [ext_resource type="Script" path="res://scripts/BottomView.gd" id="1_ti080"]
@@ -10,10 +10,14 @@
 [ext_resource type="Texture2D" uid="uid://e7sfsaw7347m" path="res://img/sprites/entities/Boiler_Animation_PNG6.png" id="8_p1dco"]
 [ext_resource type="Texture2D" uid="uid://kns6wahn3jje" path="res://img/sprites/entities/Boiler_Animation_PNG7.png" id="9_47cbo"]
 [ext_resource type="Texture2D" uid="uid://uykbgo5yhqdb" path="res://img/sprites/entities/Boiler_Animation_PNG8.png" id="10_km1f2"]
-[ext_resource type="PackedScene" uid="uid://biljcfndbqqge" path="res://scenes/misc/queuebar.tscn" id="11_3cecs"]
 [ext_resource type="Texture2D" uid="uid://brcxiga7jn58m" path="res://img/Mirror.png" id="12_mrtq3"]
 [ext_resource type="Texture2D" uid="uid://k1v6pii8qxqq" path="res://img/Flowers.png" id="13_iq8cn"]
+[ext_resource type="Texture2D" uid="uid://b1inj0ksm6uwi" path="res://img/FlowersHeart.png" id="13_pn3vo"]
 [ext_resource type="Texture2D" uid="uid://dp68jt6flbutc" path="res://img/Flowers2.png" id="14_whgcx"]
+[ext_resource type="Texture2D" uid="uid://gfp1mcfwosom" path="res://img/sprites/ingridients/red.png" id="15_iulk4"]
+[ext_resource type="Texture2D" uid="uid://x3hyhklqp6tl" path="res://img/sprites/ingridients/yellow.png" id="16_4t0fl"]
+[ext_resource type="Texture2D" uid="uid://b3adijfsu1hxu" path="res://img/sprites/ingridients/blue.png" id="17_5fmj3"]
+[ext_resource type="Texture2D" uid="uid://f3jho85dqiw7" path="res://img/sprites/ingridients/green.png" id="18_nvjq7"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_a3jew"]
 animations = [{
@@ -47,6 +51,8 @@ animations = [{
 "speed": 8.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ngrq6"]
+
 [node name="BottomView" type="Node2D"]
 script = ExtResource("1_ti080")
 
@@ -56,26 +62,157 @@ scale = Vector2(2.00469, 1.53333)
 texture = ExtResource("1_o2ydm")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
 position = Vector2(637, 249)
 scale = Vector2(1.8744, 1.8744)
 sprite_frames = SubResource("SpriteFrames_a3jew")
 autoplay = "default"
 frame_progress = 0.688145
 
-[node name="QueueBar" parent="." instance=ExtResource("11_3cecs")]
-position = Vector2(538, 443)
-
 [node name="Mirror" type="Sprite2D" parent="."]
 position = Vector2(129, 227)
 scale = Vector2(4.77902, 3.65179)
 texture = ExtResource("12_mrtq3")
 
+[node name="Area2D" type="Area2D" parent="Mirror"]
+position = Vector2(-26.993, -62.1613)
+scale = Vector2(0.209248, 0.273838)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mirror/Area2D"]
+position = Vector2(100, 385)
+shape = SubResource("RectangleShape2D_ngrq6")
+
+[node name="Area2D2" type="Area2D" parent="Mirror"]
+position = Vector2(-26.993, -62.1613)
+scale = Vector2(0.209248, 0.273838)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mirror/Area2D2"]
+position = Vector2(100, 350)
+shape = SubResource("RectangleShape2D_ngrq6")
+
+[node name="Area2D3" type="Area2D" parent="Mirror"]
+position = Vector2(-26.993, -62.1613)
+scale = Vector2(0.209248, 0.273838)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mirror/Area2D3"]
+position = Vector2(100, 315)
+shape = SubResource("RectangleShape2D_ngrq6")
+
+[node name="Area2D4" type="Area2D" parent="Mirror"]
+position = Vector2(-26.993, -62.1613)
+scale = Vector2(0.209248, 0.273838)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mirror/Area2D4"]
+position = Vector2(100, 280)
+shape = SubResource("RectangleShape2D_ngrq6")
+
+[node name="Area2D5" type="Area2D" parent="Mirror"]
+position = Vector2(-26.993, -62.1613)
+scale = Vector2(0.209248, 0.273838)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mirror/Area2D5"]
+position = Vector2(100, 245)
+shape = SubResource("RectangleShape2D_ngrq6")
+
+[node name="Area2D6" type="Area2D" parent="Mirror"]
+position = Vector2(-26.993, -62.1613)
+scale = Vector2(0.209248, 0.273838)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mirror/Area2D6"]
+position = Vector2(100, 210)
+shape = SubResource("RectangleShape2D_ngrq6")
+
+[node name="Area2D7" type="Area2D" parent="Mirror"]
+position = Vector2(-26.993, -62.1613)
+scale = Vector2(0.209248, 0.273838)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mirror/Area2D7"]
+position = Vector2(100, 175)
+shape = SubResource("RectangleShape2D_ngrq6")
+
 [node name="Flowers" type="Sprite2D" parent="."]
+texture_repeat = 3
 position = Vector2(458, 312)
 scale = Vector2(4.5, 4.5)
 texture = ExtResource("13_iq8cn")
+
+[node name="FlowersHeart" type="Sprite2D" parent="Flowers"]
+position = Vector2(-10.4444, 14.6667)
+scale = Vector2(1.11111, 1.11111)
+texture = ExtResource("13_pn3vo")
+
+[node name="FlowersHeart2" type="Sprite2D" parent="Flowers"]
+position = Vector2(-4.66666, 10.2222)
+scale = Vector2(1.11111, 1.11111)
+texture = ExtResource("13_pn3vo")
+
+[node name="FlowersHeart3" type="Sprite2D" parent="Flowers"]
+position = Vector2(5.55556, 8.22222)
+scale = Vector2(1.11111, 1.11111)
+texture = ExtResource("13_pn3vo")
+
+[node name="FlowersHeart4" type="Sprite2D" parent="Flowers"]
+position = Vector2(10.4444, 4.44444)
+scale = Vector2(1.11111, 1.11111)
+texture = ExtResource("13_pn3vo")
 
 [node name="Flowers2" type="Sprite2D" parent="."]
 position = Vector2(818, 309)
 scale = Vector2(4.5, 4.5)
 texture = ExtResource("14_whgcx")
+
+[node name="Buttons" type="GridContainer" parent="."]
+offset_left = 447.0
+offset_top = 135.0
+offset_right = 807.0
+offset_bottom = 195.0
+theme_override_constants/h_separation = 40
+columns = 4
+
+[node name="Yellow" type="TextureButton" parent="Buttons"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture_normal = ExtResource("16_4t0fl")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Blue" type="TextureButton" parent="Buttons"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture_normal = ExtResource("17_5fmj3")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Red" type="TextureButton" parent="Buttons"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture_normal = ExtResource("15_iulk4")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Green" type="TextureButton" parent="Buttons"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture_normal = ExtResource("18_nvjq7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="FlowersHeart" type="Sprite2D" parent="."]
+position = Vector2(901, 375)
+scale = Vector2(5, 5)
+texture = ExtResource("13_pn3vo")
+
+[node name="FlowersHeart2" type="Sprite2D" parent="."]
+position = Vector2(874, 357)
+scale = Vector2(5, 5)
+texture = ExtResource("13_pn3vo")
+
+[node name="FlowersHeart3" type="Sprite2D" parent="."]
+position = Vector2(829, 348)
+scale = Vector2(5, 5)
+texture = ExtResource("13_pn3vo")
+
+[node name="FlowersHeart4" type="Sprite2D" parent="."]
+position = Vector2(807, 330)
+scale = Vector2(5, 5)
+texture = ExtResource("13_pn3vo")

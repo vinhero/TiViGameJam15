@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=3 uid="uid://takgxcjfoiuj"]
+
+[ext_resource type="Texture2D" uid="uid://b37i5c7uxcbpr" path="res://img/Mini_Mirror_Slime.png" id="1_idqh5"]
+[ext_resource type="Texture2D" uid="uid://dch4krbqsqhx7" path="res://img/Spiegel_Ball.png" id="2_cnqpa"]
+[ext_resource type="Script" path="res://scenes/enemies/mini_slime.gd" id="2_srblh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vmp82"]
+atlas = ExtResource("1_idqh5")
+region = Rect2(0, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ri7ba"]
+atlas = ExtResource("1_idqh5")
+region = Rect2(8, 0, 8, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vxwp5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vmp82")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ri7ba")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[node name="MiniSlime" type="AnimatedSprite2D"]
+scale = Vector2(4.0625, 4.0625)
+sprite_frames = SubResource("SpriteFrames_vxwp5")
+autoplay = "default"
+frame_progress = 0.635331
+script = ExtResource("2_srblh")
+
+[node name="Ball1" type="Sprite2D" parent="."]
+position = Vector2(10.0923, -6.8923)
+scale = Vector2(0.886154, 0.886154)
+texture = ExtResource("2_cnqpa")
+
+[node name="Ball2" type="Sprite2D" parent="."]
+position = Vector2(15.7538, -11.0769)
+scale = Vector2(0.886154, 0.886154)
+texture = ExtResource("2_cnqpa")
+
+[node name="Ball3" type="Sprite2D" parent="."]
+position = Vector2(21.4154, -15.0154)
+scale = Vector2(0.886, 0.886)
+texture = ExtResource("2_cnqpa")

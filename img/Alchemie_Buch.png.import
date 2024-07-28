@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gfp1mcfwosom"
-path="res://.godot/imported/viereckrot.png-8516ea984556c680f31095681e21ebe3.ctex"
+uid="uid://jwbn5ksf7foq"
+path="res://.godot/imported/Alchemie_Buch.png-39e25a327b487f046dd3b132323d7e6c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/sprites/ingridients/viereckrot.png"
-dest_files=["res://.godot/imported/viereckrot.png-8516ea984556c680f31095681e21ebe3.ctex"]
+source_file="res://img/Alchemie_Buch.png"
+dest_files=["res://.godot/imported/Alchemie_Buch.png-39e25a327b487f046dd3b132323d7e6c.ctex"]
 
 [params]
 

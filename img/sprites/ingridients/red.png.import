@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3adijfsu1hxu"
-path="res://.godot/imported/Kreis_Blauer_Ball.png-9739c2d164f3e2f0c24e663f6ef87228.ctex"
+uid="uid://gfp1mcfwosom"
+path="res://.godot/imported/red.png-038d7d225978c68c0fb3e9aa626c53f9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/sprites/ingridients/Kreis_Blauer_Ball.png"
-dest_files=["res://.godot/imported/Kreis_Blauer_Ball.png-9739c2d164f3e2f0c24e663f6ef87228.ctex"]
+source_file="res://img/sprites/ingridients/red.png"
+dest_files=["res://.godot/imported/red.png-038d7d225978c68c0fb3e9aa626c53f9.ctex"]
 
 [params]
 
