@@ -2,6 +2,7 @@ extends Node2D
 
 signal alchemist_has_died
 signal alchemist_current_hearts
+signal enemie_spawned
 
 func _on_boiler_queue_full(queue: Array[int]):
 	$Spawner.kill_nearest(queue)
@@ -14,3 +15,6 @@ func _on_spawner_alchemist_hit():
 
 func _on_alchemist_current_hp_changed(hp: int):
 	alchemist_current_hearts.emit(hp)
+
+func _on_spawner_enemie_spawned(enemie: Enemie):
+	enemie_spawned.emit(enemie)

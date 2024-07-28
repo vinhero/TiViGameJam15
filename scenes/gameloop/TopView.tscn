@@ -33,8 +33,9 @@ layer_0/tile_data = PackedInt32Array(0, 1, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0)
 position = Vector2(72, 126)
 
 [node name="Spawner" parent="." instance=ExtResource("4_54vlf")]
-position = Vector2(1292, 176)
+position = Vector2(1340, 176)
 
 [connection signal="current_hp_changed" from="Alchemist" to="." method="_on_alchemist_current_hp_changed"]
 [connection signal="has_died" from="Alchemist" to="." method="_on_alchemist_has_died"]
 [connection signal="alchemist_hit" from="Spawner" to="." method="_on_spawner_alchemist_hit"]
+[connection signal="enemie_spawned" from="Spawner" to="." method="_on_spawner_enemie_spawned"]

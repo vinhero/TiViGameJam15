@@ -11,6 +11,7 @@ const WALK_ANIMATION : String = "walk"
 
 signal attacked_alchemist
 signal has_died(enemie: Enemie)
+signal spawned(enemie: Enemie)
 
 var arrCryptonite: Array[int]
 
@@ -20,11 +21,11 @@ func setCryptonite():
 		var nRandom = randi_range(0, nMax)
 		arrCryptonite.append(nRandom)
 	
-	var lblCryptonite = Label.new()
-	lblCryptonite.text = str(arrCryptonite)
-	lblCryptonite.position.y = position.y - 10.0
-	lblCryptonite.position.x = position.x - 30.0
-	add_child(lblCryptonite)
+	#var lblCryptonite = Label.new()
+	#lblCryptonite.text = str(arrCryptonite)
+	#lblCryptonite.position.y = position.y - 10.0
+	#lblCryptonite.position.x = position.x - 30.0
+	#add_child(lblCryptonite)
 
 func setArea2D():
 	var area : Area2D = Area2D.new()
@@ -51,6 +52,7 @@ func _ready():
 	setCryptonite()
 	setArea2D()
 	animation_looped.connect(on_has_died)
+	spawned.emit(self)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

@@ -1,15 +1,18 @@
 class_name MiniSlime
 extends AnimatedSprite2D
 
-var color : Color = Color("BLUE")
+var slimeColor : Color = Color("BLUE")
 var arrIngridientses : Array[int]
+@onready var arrIngr = [$Ball1, $Ball2, $Ball3]
 
-func _init():
-	pass
+#func _init(array: Array[int]):
+	#arrIngridientses = array
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	for index in arrIngridientses.size():
+		arrIngr[index].modulate = Color(ENUMS.Ingridients.find_key(arrIngridientses[index]))
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
