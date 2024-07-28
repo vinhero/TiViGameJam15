@@ -161,10 +161,30 @@ position = Vector2(818, 309)
 scale = Vector2(4.5, 4.5)
 texture = ExtResource("14_whgcx")
 
+[node name="FlowersHeart" type="Sprite2D" parent="Flowers2"]
+position = Vector2(18.4444, 14.6667)
+scale = Vector2(1.11111, 1.11111)
+texture = ExtResource("13_pn3vo")
+
+[node name="FlowersHeart2" type="Sprite2D" parent="Flowers2"]
+position = Vector2(12.4444, 10.6667)
+scale = Vector2(1.11111, 1.11111)
+texture = ExtResource("13_pn3vo")
+
+[node name="FlowersHeart3" type="Sprite2D" parent="Flowers2"]
+position = Vector2(2.44444, 8.66667)
+scale = Vector2(1.11111, 1.11111)
+texture = ExtResource("13_pn3vo")
+
+[node name="FlowersHeart4" type="Sprite2D" parent="Flowers2"]
+position = Vector2(-2.44446, 4.66668)
+scale = Vector2(1.11111, 1.11111)
+texture = ExtResource("13_pn3vo")
+
 [node name="Buttons" type="GridContainer" parent="."]
-offset_left = 447.0
+offset_left = 460.0
 offset_top = 135.0
-offset_right = 807.0
+offset_right = 820.0
 offset_bottom = 195.0
 theme_override_constants/h_separation = 40
 columns = 4
@@ -196,23 +216,3 @@ layout_mode = 2
 texture_normal = ExtResource("18_nvjq7")
 ignore_texture_size = true
 stretch_mode = 0
-
-[node name="FlowersHeart" type="Sprite2D" parent="."]
-position = Vector2(901, 375)
-scale = Vector2(5, 5)
-texture = ExtResource("13_pn3vo")
-
-[node name="FlowersHeart2" type="Sprite2D" parent="."]
-position = Vector2(874, 357)
-scale = Vector2(5, 5)
-texture = ExtResource("13_pn3vo")
-
-[node name="FlowersHeart3" type="Sprite2D" parent="."]
-position = Vector2(829, 348)
-scale = Vector2(5, 5)
-texture = ExtResource("13_pn3vo")
-
-[node name="FlowersHeart4" type="Sprite2D" parent="."]
-position = Vector2(807, 330)
-scale = Vector2(5, 5)
-texture = ExtResource("13_pn3vo")

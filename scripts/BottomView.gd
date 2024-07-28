@@ -2,12 +2,12 @@ extends Node2D
 
 signal queue_full(queue: Array[int])
 
-@export var arrButtonCoordinates : Array[Vector2]
-var arrButtons : Array[IngridientsButton]
+#@export var arrButtonCoordinates : Array[Vector2]
+#var arrButtons : Array[IngridientsButton]
 var arrCurrentQueue : Array[int]
 
-var arrMiniSlimeSpawns = [$Mirror/Area2D, $Mirror/Area2D2, $Mirror/Area2D3, $Mirror/Area2D4, $Mirror/Area2D5, $Mirror/Area2D6, $Mirror/Area2D7]
-
+@onready var arrMiniSlimeSpawns = [$Mirror/Area2D, $Mirror/Area2D2, $Mirror/Area2D3, $Mirror/Area2D4, $Mirror/Area2D5, $Mirror/Area2D6, $Mirror/Area2D7]
+@onready var arrHearts = [$Flowers/FlowersHeart, $Flowers/FlowersHeart2, $Flowers/FlowersHeart3, $Flowers/FlowersHeart4, $Flowers2/FlowersHeart4, $Flowers2/FlowersHeart3, $Flowers2/FlowersHeart2, $Flowers2/FlowersHeart]
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#for ingridient in ENUMS.Ingridients.keys():
@@ -18,6 +18,11 @@ func _ready():
 			#arrButtons.append(newButton)
 			#add_child(newButton)
 	pass
+
+func changeHearts(hp: int):
+	for index in arrHearts.size():
+		if (index >= hp):
+			(arrHearts[index] as Sprite2D).hide()
 
 func onIngridientsPressed(type: int):
 	arrCurrentQueue.append(type)

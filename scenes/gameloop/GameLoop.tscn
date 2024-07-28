@@ -9,9 +9,9 @@ script = ExtResource("1_3onj2")
 
 [node name="Boiler" parent="." instance=ExtResource("3_oaxxn")]
 position = Vector2(-1, 175)
-arrButtonCoordinates = Array[Vector2]([Vector2(465, 135), Vector2(565, 135), Vector2(665, 135), Vector2(765, 135), Vector2(410, 210), Vector2(820, 210)])
 
 [node name="Top" parent="." instance=ExtResource("2_wbco8")]
 
 [connection signal="queue_full" from="Boiler" to="Top" method="_on_boiler_queue_full"]
+[connection signal="alchemist_current_hearts" from="Top" to="." method="_on_top_alchemist_current_hearts"]
 [connection signal="alchemist_has_died" from="Top" to="." method="_on_top_alchemist_has_died"]

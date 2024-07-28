@@ -24,4 +24,5 @@ position = Vector2(8, -52)
 shape = SubResource("RectangleShape2D_7vxmb")
 
 [node name="healthbar" parent="." instance=ExtResource("2_rcd04")]
+visible = false
 position = Vector2(-60, -94)
