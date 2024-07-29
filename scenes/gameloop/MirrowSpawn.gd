@@ -18,6 +18,13 @@ func set_enemie(new_target: Enemie):
 func get_enemie():
 	return target
 
+func isClear():
+	return miniEnemie == null
+
+func clear():
+	miniEnemie.queue_free()
+	#target = null
+
 func set_mini_enemie(position: Vector2):
 	miniEnemie = miniSlime.instantiate()
 	miniEnemie.arrIngridientses = target.arrCryptonite

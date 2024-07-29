@@ -12,3 +12,7 @@ func _on_top_alchemist_current_hearts(hp: int):
 
 func _on_top_enemie_spawned(enemie: Enemie):
 	$Boiler.add_mirror_enemie(enemie)
+
+
+func _on_top_enemie_died(enemie: Enemie):
+	$Boiler.del_mirror_enemie(enemie)

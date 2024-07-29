@@ -18,8 +18,8 @@
 [ext_resource type="Texture2D" uid="uid://gfp1mcfwosom" path="res://img/sprites/ingridients/red.png" id="15_iulk4"]
 [ext_resource type="Texture2D" uid="uid://x3hyhklqp6tl" path="res://img/sprites/ingridients/yellow.png" id="16_4t0fl"]
 [ext_resource type="Script" path="res://scripts/IngriedientsButton.gd" id="17_0cs0d"]
-[ext_resource type="Texture2D" uid="uid://b3adijfsu1hxu" path="res://img/sprites/ingridients/blue.png" id="17_5fmj3"]
 [ext_resource type="Texture2D" uid="uid://f3jho85dqiw7" path="res://img/sprites/ingridients/green.png" id="18_nvjq7"]
+[ext_resource type="Texture2D" uid="uid://b3adijfsu1hxu" path="res://img/sprites/ingridients/cyan.png" id="18_yilaj"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_a3jew"]
 animations = [{
@@ -209,7 +209,7 @@ btnType = 3
 [node name="Blue" type="TextureButton" parent="Buttons"]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
-texture_normal = ExtResource("17_5fmj3")
+texture_normal = ExtResource("18_yilaj")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("17_0cs0d")

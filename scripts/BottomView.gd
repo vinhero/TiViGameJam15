@@ -5,6 +5,7 @@ signal queue_full(queue: Array[int])
 #@export var arrButtonCoordinates : Array[Vector2]
 #var arrButtons : Array[IngridientsButton]
 var arrCurrentQueue : Array[int]
+var arrMiniEnemieQueue : Array[Enemie]
 
 @onready var arrMirrorSpawns = [$Mirror/Area2D, $Mirror/Area2D2, $Mirror/Area2D3, $Mirror/Area2D4, $Mirror/Area2D5, $Mirror/Area2D6, $Mirror/Area2D7]
 @onready var arrHearts = [$Flowers/FlowersHeart, $Flowers/FlowersHeart2, $Flowers/FlowersHeart3, $Flowers/FlowersHeart4, $Flowers2/FlowersHeart4, $Flowers2/FlowersHeart3, $Flowers2/FlowersHeart2, $Flowers2/FlowersHeart]
@@ -29,12 +30,26 @@ func changeHearts(hp: int):
 			(arrHearts[index] as Sprite2D).hide()
 
 func add_mirror_enemie(enemie: Enemie):
-	var was_set : bool = false
-	for area in arrMirrorSpawns:
-		if (was_set == false && area.get_enemie() == null):
-			area.set_enemie(enemie)
+	arrMiniEnemieQueue.append(enemie)
+	update_mini_spawns()
+
+func del_mirror_enemie(enemie: Enemie):
+	arrMiniEnemieQueue.erase(enemie)
+	update_mini_spawns()
+
+func update_mini_spawns():
+	for index in arrMirrorSpawns.size():
+		var area = arrMirrorSpawns[index]
+		if (area.isClear() == false):
+			area.clear()
+		if (index < arrMiniEnemieQueue.size()):
+			area.set_enemie(arrMiniEnemieQueue[index])
 			area.set_mini_enemie(area.spawnPosition)
-			was_set = true
+	#for index in arrMiniEnemieQueue.size():
+		#if (index < arrMirrorSpawns.size()):
+			#var area = arrMirrorSpawns[index]
+			#area.set_enemie(arrMiniEnemieQueue[index])
+			#area.set_mini_enemie(area.spawnPosition)
 
 func onIngridientsPressed(type: int):
 	arrCurrentQueue.append(type)

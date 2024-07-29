@@ -10,7 +10,7 @@ enum Ingridients
 	#ELFENKRISTAL,
 	GREEN,
 	RED,
-	BLUE,
+	CYAN,
 	YELLOW,
 	NONE
 }

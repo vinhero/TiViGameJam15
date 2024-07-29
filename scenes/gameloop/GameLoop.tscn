@@ -15,4 +15,5 @@ position = Vector2(-1, 175)
 [connection signal="queue_full" from="Boiler" to="Top" method="_on_boiler_queue_full"]
 [connection signal="alchemist_current_hearts" from="Top" to="." method="_on_top_alchemist_current_hearts"]
 [connection signal="alchemist_has_died" from="Top" to="." method="_on_top_alchemist_has_died"]
+[connection signal="enemie_died" from="Top" to="." method="_on_top_enemie_died"]
 [connection signal="enemie_spawned" from="Top" to="." method="_on_top_enemie_spawned"]
