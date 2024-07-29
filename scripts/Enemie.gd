@@ -42,6 +42,7 @@ func setArea2D():
 func kill():
 	speed = 0
 	animation = DIE_ANIMATION
+	z_index = 1000
 
 func attack():
 	speed = 0
