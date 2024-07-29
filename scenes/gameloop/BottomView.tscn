@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://cd1nlmj68a3qg"]
+[gd_scene load_steps=39 format=3 uid="uid://cd1nlmj68a3qg"]
 
 [ext_resource type="Texture2D" uid="uid://up0qy0rbjdw3" path="res://img/background/Alchemist_Tower-Insight.png" id="1_o2ydm"]
 [ext_resource type="Script" path="res://scripts/BottomView.gd" id="1_ti080"]
@@ -72,6 +72,30 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ngrq6"]
+
+[sub_resource type="InputEventAction" id="InputEventAction_evucy"]
+action = &"yellow"
+
+[sub_resource type="Shortcut" id="Shortcut_rk0f0"]
+events = [SubResource("InputEventAction_evucy")]
+
+[sub_resource type="InputEventAction" id="InputEventAction_kb5mf"]
+action = &"blue"
+
+[sub_resource type="Shortcut" id="Shortcut_erqpn"]
+events = [SubResource("InputEventAction_kb5mf")]
+
+[sub_resource type="InputEventAction" id="InputEventAction_5w3ef"]
+action = &"red"
+
+[sub_resource type="Shortcut" id="Shortcut_4pj15"]
+events = [SubResource("InputEventAction_5w3ef")]
+
+[sub_resource type="InputEventAction" id="InputEventAction_hxw51"]
+action = &"green"
+
+[sub_resource type="Shortcut" id="Shortcut_kyeyd"]
+events = [SubResource("InputEventAction_hxw51")]
 
 [node name="BottomView" type="Node2D"]
 script = ExtResource("1_ti080")
@@ -219,6 +243,7 @@ columns = 4
 [node name="Yellow" type="TextureButton" parent="Buttons"]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
+shortcut = SubResource("Shortcut_rk0f0")
 texture_normal = ExtResource("16_4t0fl")
 texture_hover = ExtResource("18_8njyj")
 ignore_texture_size = true
@@ -229,6 +254,7 @@ btnType = 3
 [node name="Blue" type="TextureButton" parent="Buttons"]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
+shortcut = SubResource("Shortcut_erqpn")
 texture_normal = ExtResource("18_yilaj")
 texture_hover = ExtResource("21_g6uaj")
 ignore_texture_size = true
@@ -239,6 +265,7 @@ btnType = 2
 [node name="Red" type="TextureButton" parent="Buttons"]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
+shortcut = SubResource("Shortcut_4pj15")
 texture_normal = ExtResource("15_iulk4")
 texture_hover = ExtResource("23_4yty4")
 ignore_texture_size = true
@@ -249,6 +276,7 @@ btnType = 1
 [node name="Green" type="TextureButton" parent="Buttons"]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
+shortcut = SubResource("Shortcut_kyeyd")
 texture_normal = ExtResource("18_nvjq7")
 texture_hover = ExtResource("25_ynfwf")
 ignore_texture_size = true

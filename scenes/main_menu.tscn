@@ -1,9 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://cnp2eaodeq37t"]
+[gd_scene load_steps=12 format=3 uid="uid://cnp2eaodeq37t"]
 
 [ext_resource type="PackedScene" uid="uid://cnvfcqqhax6hi" path="res://scenes/gameloop/TopView.tscn" id="1_hbgqk"]
 [ext_resource type="Script" path="res://scenes/main_menu.gd" id="1_yicp2"]
 [ext_resource type="PackedScene" uid="uid://yk0xwhddtvdv" path="res://scenes/gameloop/GameLoop.tscn" id="2_g8mo7"]
 [ext_resource type="AudioStream" uid="uid://bu4dftn4kigvw" path="res://music/PotionthrowerV2.mp3" id="3_3ayja"]
+[ext_resource type="Texture2D" uid="uid://bqg3m0gek0w3p" path="res://img/btnStart.PNG" id="5_xduu2"]
+[ext_resource type="Texture2D" uid="uid://12faioxrfgq6" path="res://img/btnStartHover.png" id="6_kcls4"]
+[ext_resource type="Texture2D" uid="uid://dlrlc8dbt87cn" path="res://img/btnStartClicked.PNG" id="6_y56ee"]
+[ext_resource type="Texture2D" uid="uid://u2p8hjmfl67p" path="res://img/btnTutorial.png" id="8_fyd8c"]
+[ext_resource type="Texture2D" uid="uid://cpc736itajev" path="res://img/btnTutorialPressed.png" id="9_df85e"]
+[ext_resource type="Texture2D" uid="uid://kqome5rxhs03" path="res://img/btnTutorialHovered.png" id="10_h14cm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gtxa4"]
 size = Vector2(162, 541)
@@ -31,21 +37,25 @@ stream = ExtResource("3_3ayja")
 autoplay = true
 bus = &"Music"
 
-[node name="btnStart" type="Button" parent="."]
-offset_left = 550.0
-offset_top = 200.0
-offset_right = 730.0
-offset_bottom = 320.0
-theme_override_font_sizes/font_size = 50
-text = "Start"
+[node name="btnStart" type="TextureButton" parent="."]
+offset_left = 457.0
+offset_top = 134.0
+offset_right = 819.0
+offset_bottom = 375.0
+texture_normal = ExtResource("5_xduu2")
+texture_pressed = ExtResource("6_y56ee")
+texture_hover = ExtResource("6_kcls4")
+stretch_mode = 0
 
-[node name="btnTutorial" type="Button" parent="."]
-offset_left = 500.0
-offset_top = 350.0
-offset_right = 780.0
-offset_bottom = 470.0
-theme_override_font_sizes/font_size = 50
-text = "Tutorial"
+[node name="btnTutorial" type="TextureButton" parent="."]
+offset_left = 462.0
+offset_top = 278.0
+offset_right = 824.0
+offset_bottom = 519.0
+texture_normal = ExtResource("8_fyd8c")
+texture_pressed = ExtResource("9_df85e")
+texture_hover = ExtResource("10_h14cm")
+stretch_mode = 0
 
 [connection signal="enemie_spawned" from="TopView" to="." method="_on_top_view_enemie_spawned"]
 [connection signal="area_entered" from="DeleteArea" to="." method="_on_delete_area_area_entered"]

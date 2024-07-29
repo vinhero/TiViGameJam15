@@ -69,6 +69,9 @@ func _ready():
 	setCryptonite()
 	setArea2D()
 	animation_looped.connect(on_has_died)
+	
+	speed = randi_range(60, 100)
+	
 	spawned.emit(self)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

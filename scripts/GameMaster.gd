@@ -16,3 +16,7 @@ func _on_top_enemie_spawned(enemie: Enemie):
 
 func _on_top_enemie_died(enemie: Enemie):
 	$Boiler.del_mirror_enemie(enemie)
+
+
+func _on_top_difficulty_increased():
+	$Music.pitch_scale += 0.01

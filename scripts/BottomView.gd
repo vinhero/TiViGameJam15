@@ -57,7 +57,6 @@ func onIngridientsPressed(type: int):
 	if (arrCurrentQueue.size() == 3):
 		var currentQueue = arrCurrentQueue
 		queue_full.emit(currentQueue)
-		arrCurrentQueue.clear()
 		#$QueueBar.delete_icons()
 		clear_boiler()
 	else:
@@ -65,5 +64,10 @@ func onIngridientsPressed(type: int):
 			$AnimatedSprite2D.material.set_shader_parameter("COLOR" + str(index+1), Color(ENUMS.Ingridients.find_key(arrCurrentQueue[index])))
 
 func clear_boiler():
+	arrCurrentQueue.clear()
 	$AnimatedSprite2D.material.set_shader_parameter("COLOR1", Color("black"))
 	$AnimatedSprite2D.material.set_shader_parameter("COLOR2", Color("black"))
+
+func _process(delta):
+	if Input.is_action_pressed("clear_queue"):
+		clear_boiler()

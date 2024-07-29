@@ -40,3 +40,4 @@ position = Vector2(1340, 176)
 [connection signal="alchemist_hit" from="Spawner" to="." method="_on_spawner_alchemist_hit"]
 [connection signal="enemie_died" from="Spawner" to="." method="_on_spawner_enemie_died"]
 [connection signal="enemie_spawned" from="Spawner" to="." method="_on_spawner_enemie_spawned"]
+[connection signal="increase_difficulty" from="Spawner" to="." method="_on_spawner_increase_difficulty"]
