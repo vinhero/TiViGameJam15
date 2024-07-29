@@ -3,9 +3,13 @@ extends Node2D
 
 signal game_over
 
+@export var game_over_scene : PackedScene
+
 func _on_top_alchemist_has_died():
 	print("Game Over.")
 	game_over.emit()
+	SceneSwitcher.switch_scene(game_over_scene.resource_path)
+	
 
 func _on_top_alchemist_current_hearts(hp: int):
 	$Boiler.changeHearts(hp)
