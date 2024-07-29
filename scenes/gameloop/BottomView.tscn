@@ -113,6 +113,13 @@ sprite_frames = SubResource("SpriteFrames_a3jew")
 autoplay = "default"
 frame_progress = 0.688145
 
+[node name="Space" type="Label" parent="AnimatedSprite2D"]
+offset_left = -23.4742
+offset_top = 107.234
+offset_right = 16.5258
+offset_bottom = 130.234
+text = "Space"
+
 [node name="Mirror" type="Sprite2D" parent="."]
 position = Vector2(130, 251)
 scale = Vector2(4.77902, 3.65179)
@@ -243,6 +250,7 @@ columns = 4
 [node name="Yellow" type="TextureButton" parent="Buttons"]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
+focus_mode = 0
 shortcut = SubResource("Shortcut_rk0f0")
 texture_normal = ExtResource("16_4t0fl")
 texture_hover = ExtResource("18_8njyj")
@@ -251,9 +259,18 @@ stretch_mode = 0
 script = ExtResource("17_0cs0d")
 btnType = 3
 
+[node name="Q" type="Label" parent="Buttons/Yellow"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 59.0
+offset_right = 36.0
+offset_bottom = 82.0
+text = "Q"
+
 [node name="Blue" type="TextureButton" parent="Buttons"]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
+focus_mode = 0
 shortcut = SubResource("Shortcut_erqpn")
 texture_normal = ExtResource("18_yilaj")
 texture_hover = ExtResource("21_g6uaj")
@@ -262,9 +279,17 @@ stretch_mode = 0
 script = ExtResource("17_0cs0d")
 btnType = 2
 
+[node name="W" type="Label" parent="Buttons/Blue"]
+offset_left = 23.0
+offset_top = 59.0
+offset_right = 36.0
+offset_bottom = 82.0
+text = "W"
+
 [node name="Red" type="TextureButton" parent="Buttons"]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
+focus_mode = 0
 shortcut = SubResource("Shortcut_4pj15")
 texture_normal = ExtResource("15_iulk4")
 texture_hover = ExtResource("23_4yty4")
@@ -273,9 +298,17 @@ stretch_mode = 0
 script = ExtResource("17_0cs0d")
 btnType = 1
 
+[node name="E" type="Label" parent="Buttons/Red"]
+offset_left = 23.0
+offset_top = 59.0
+offset_right = 36.0
+offset_bottom = 82.0
+text = "E"
+
 [node name="Green" type="TextureButton" parent="Buttons"]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
+focus_mode = 0
 shortcut = SubResource("Shortcut_kyeyd")
 texture_normal = ExtResource("18_nvjq7")
 texture_hover = ExtResource("25_ynfwf")
@@ -283,3 +316,10 @@ ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("17_0cs0d")
 btnType = 0
+
+[node name="R" type="Label" parent="Buttons/Green"]
+offset_left = 23.0
+offset_top = 59.0
+offset_right = 36.0
+offset_bottom = 82.0
+text = "R"

@@ -68,6 +68,10 @@ func clear_boiler():
 	$AnimatedSprite2D.material.set_shader_parameter("COLOR1", Color("black"))
 	$AnimatedSprite2D.material.set_shader_parameter("COLOR2", Color("black"))
 
-func _process(delta):
-	if Input.is_action_pressed("clear_queue"):
+#func _process(delta):
+	#if Input.is_action_pressed("clear_queue"):
+		#clear_boiler()
+
+func _input(event):
+	if event.is_action_pressed("clear_queue"):
 		clear_boiler()

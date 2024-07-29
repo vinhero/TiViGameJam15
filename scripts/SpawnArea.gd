@@ -7,6 +7,7 @@ var EnemieCounter : int = 0
 var EnemiePath = "res://scenes/enemies/%s.tscn"
 var Enemy = load(EnemiePath % EnemieName)
 
+@export var fall_back : int = 4
 @export var max_slimes : int = 2
 @export var difficulty_stages : int = 2
 @export var default_timer : float = 2.5
@@ -99,5 +100,5 @@ func on_enemie_died(enemie: Enemie, emit: bool):
 
 func on_alchemist_hit():
 	alchemist_hit.emit()
-	if max_slimes > 2:
+	if max_slimes > fall_back:
 		max_slimes -= 1
