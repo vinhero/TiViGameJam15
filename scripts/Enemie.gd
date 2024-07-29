@@ -9,6 +9,9 @@ const WALK_ANIMATION : String = "walk"
 @export var MaxCryptonites = 3
 @export var speed = 60
 
+@export_range(0.0, 1.0) var minColor : float
+@export_range(0.0, 1.0) var maxColor : float
+
 var red : float
 var green : float
 var blue : float
@@ -54,9 +57,9 @@ func attack():
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	red = randf_range(0.2, 1.0)
-	green = randf_range(0.2, 1.0)
-	blue = randf_range(0.2, 1.0)
+	red = randf_range(minColor, maxColor)
+	green = randf_range(minColor, maxColor)
+	blue = randf_range(minColor, maxColor)
 	
 	material.set_shader_parameter("red", red)
 	material.set_shader_parameter("green", green)

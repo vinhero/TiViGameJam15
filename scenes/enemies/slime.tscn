@@ -48,3 +48,5 @@ sprite_frames = SubResource("SpriteFrames_e1mdt")
 animation = &"die"
 autoplay = "walk"
 script = ExtResource("5_q73gi")
+minColor = 0.524
+maxColor = 1.0
