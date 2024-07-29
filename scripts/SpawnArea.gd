@@ -7,6 +7,7 @@ var EnemieCounter : int = 0
 var EnemiePath = "res://scenes/enemies/%s.tscn"
 var Enemy = load(EnemiePath % EnemieName)
 @onready var top = get_tree().get_root()
+#@onready var top = get_parent().get_parent()
 
 signal alchemist_hit
 signal enemie_spawned(enemie: Enemie)
@@ -19,7 +20,8 @@ func spawn():
 	EnemieCounter += 1
 	var spawnedEnemy = Enemy.instantiate()
 	arrEnemies.append(spawnedEnemy)
-	spawnedEnemy.position = $".".position
+	spawnedEnemy.global_position = $".".global_position
+	spawnedEnemy.z_index = 100
 	var enemieClass = (spawnedEnemy.get_child(0) as Enemie)
 	enemieClass.attacked_alchemist.connect(on_alchemist_hit)
 	enemieClass.has_died.connect(on_enemie_died)
