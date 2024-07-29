@@ -6,7 +6,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$TopView/Spawner/SpawnIntervall.wait_time = 2.0
+	$TopView/Spawner/SpawnIntervall.wait_time = 1.0
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -23,7 +23,8 @@ func _on_delete_area_area_entered(area):
 
 func _on_btn_start_pressed():
 	#print(get_children())
-	get_tree().change_scene_to_packed(game_loop_scene)
+	SceneSwitcher.switch_scene(game_loop_scene.resource_path)
+	#get_tree().change_scene_to_packed(game_loop_scene)
 
 func _on_btn_tutorial_pressed():
 	pass # Replace with function body.
