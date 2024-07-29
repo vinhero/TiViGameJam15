@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://yk0xwhddtvdv"]
+[gd_scene load_steps=5 format=3 uid="uid://yk0xwhddtvdv"]
 
 [ext_resource type="Script" path="res://scripts/GameMaster.gd" id="1_3onj2"]
 [ext_resource type="PackedScene" uid="uid://cnvfcqqhax6hi" path="res://scenes/gameloop/TopView.tscn" id="2_wbco8"]
 [ext_resource type="PackedScene" uid="uid://cd1nlmj68a3qg" path="res://scenes/gameloop/BottomView.tscn" id="3_oaxxn"]
+[ext_resource type="AudioStream" uid="uid://bu4dftn4kigvw" path="res://music/PotionthrowerV2.mp3" id="4_3j53g"]
 
 [node name="GameLoop" type="Node2D"]
 script = ExtResource("1_3onj2")
@@ -11,6 +12,11 @@ script = ExtResource("1_3onj2")
 position = Vector2(-1, 175)
 
 [node name="Top" parent="." instance=ExtResource("2_wbco8")]
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_3j53g")
+autoplay = true
+bus = &"Music"
 
 [connection signal="queue_full" from="Boiler" to="Top" method="_on_boiler_queue_full"]
 [connection signal="alchemist_current_hearts" from="Top" to="." method="_on_top_alchemist_current_hearts"]
