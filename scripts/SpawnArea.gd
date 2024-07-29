@@ -47,8 +47,9 @@ func kill_enemies(enemiesToKill: Array[Node2D]):
 		enemie_died.emit(enemie_to_kill)
 		#(enemie.get_child(0) as Enemie).kill()
 
-func on_enemie_died(enemie: Enemie):
-	#enemie_died.emit(enemie)
+func on_enemie_died(enemie: Enemie, emit: bool):
+	if emit:
+		enemie_died.emit(enemie)
 	var parent = enemie.get_parent()
 	arrEnemies.erase(parent)
 	parent.queue_free()

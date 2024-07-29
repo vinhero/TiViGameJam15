@@ -17,7 +17,7 @@ var green : float
 var blue : float
 
 signal attacked_alchemist
-signal has_died(enemie: Enemie)
+signal has_died(enemie: Enemie, emit: bool)
 signal spawned(enemie: Enemie)
 
 var arrCryptonite: Array[int]
@@ -54,6 +54,7 @@ func kill():
 func attack():
 	speed = 0
 	attacked_alchemist.emit()
+	has_died.emit(self, true)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -76,7 +77,7 @@ func _process(delta):
 
 func on_has_died():
 	if (animation == DIE_ANIMATION):
-		has_died.emit(self)
+		has_died.emit(self, false)
 		#get_parent().queue_free()
 
 func hitbox_entered(area):
