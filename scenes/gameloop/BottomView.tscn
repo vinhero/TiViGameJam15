@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://cd1nlmj68a3qg"]
+[gd_scene load_steps=31 format=3 uid="uid://cd1nlmj68a3qg"]
 
 [ext_resource type="Texture2D" uid="uid://up0qy0rbjdw3" path="res://img/background/Alchemist_Tower-Insight.png" id="1_o2ydm"]
 [ext_resource type="Script" path="res://scripts/BottomView.gd" id="1_ti080"]
@@ -19,8 +19,12 @@
 [ext_resource type="Texture2D" uid="uid://gfp1mcfwosom" path="res://img/sprites/ingridients/red.png" id="15_iulk4"]
 [ext_resource type="Texture2D" uid="uid://x3hyhklqp6tl" path="res://img/sprites/ingridients/yellow.png" id="16_4t0fl"]
 [ext_resource type="Script" path="res://scripts/IngriedientsButton.gd" id="17_0cs0d"]
+[ext_resource type="Texture2D" uid="uid://vujomjikou0x" path="res://img/sprites/ingridients/yellow2.png" id="18_8njyj"]
 [ext_resource type="Texture2D" uid="uid://f3jho85dqiw7" path="res://img/sprites/ingridients/green.png" id="18_nvjq7"]
 [ext_resource type="Texture2D" uid="uid://b3adijfsu1hxu" path="res://img/sprites/ingridients/cyan.png" id="18_yilaj"]
+[ext_resource type="Texture2D" uid="uid://bjatmou5yj2rf" path="res://img/sprites/ingridients/cyan2.png" id="21_g6uaj"]
+[ext_resource type="Texture2D" uid="uid://2ufaljx08ev6" path="res://img/sprites/ingridients/red2.png" id="23_4yty4"]
+[ext_resource type="Texture2D" uid="uid://bapcy7kpp7xcu" path="res://img/sprites/ingridients/green2.png" id="25_ynfwf"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_pjixi"]
 
@@ -216,6 +220,7 @@ columns = 4
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 texture_normal = ExtResource("16_4t0fl")
+texture_hover = ExtResource("18_8njyj")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("17_0cs0d")
@@ -225,6 +230,7 @@ btnType = 3
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 texture_normal = ExtResource("18_yilaj")
+texture_hover = ExtResource("21_g6uaj")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("17_0cs0d")
@@ -234,6 +240,7 @@ btnType = 2
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 texture_normal = ExtResource("15_iulk4")
+texture_hover = ExtResource("23_4yty4")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("17_0cs0d")
@@ -243,6 +250,7 @@ btnType = 1
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 texture_normal = ExtResource("18_nvjq7")
+texture_hover = ExtResource("25_ynfwf")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("17_0cs0d")
