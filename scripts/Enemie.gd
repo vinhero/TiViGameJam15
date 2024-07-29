@@ -9,6 +9,10 @@ const WALK_ANIMATION : String = "walk"
 @export var MaxCryptonites = 3
 @export var speed = 60
 
+var red : float
+var green : float
+var blue : float
+
 signal attacked_alchemist
 signal has_died(enemie: Enemie)
 signal spawned(enemie: Enemie)
@@ -50,6 +54,14 @@ func attack():
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	red = randf_range(0.2, 1.0)
+	green = randf_range(0.2, 1.0)
+	blue = randf_range(0.2, 1.0)
+	
+	material.set_shader_parameter("red", red)
+	material.set_shader_parameter("green", green)
+	material.set_shader_parameter("blue", blue)
+	
 	setCryptonite()
 	setArea2D()
 	animation_looped.connect(on_has_died)

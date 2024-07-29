@@ -27,6 +27,7 @@ func clear():
 
 func set_mini_enemie(position: Vector2):
 	miniEnemie = miniSlime.instantiate()
+	miniEnemie.set_color(target.red, target.green, target.blue)
 	miniEnemie.arrIngridientses = target.arrCryptonite
 	miniEnemie.global_position = position
 	miniEnemie.z_index = 100

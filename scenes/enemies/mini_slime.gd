@@ -14,6 +14,10 @@ func _ready():
 		arrIngr[index].modulate = Color(ENUMS.Ingridients.find_key(arrIngridientses[index]))
 	pass
 
+func set_color(red, green, blue):
+	material.set_shader_parameter("red", red)
+	material.set_shader_parameter("green", green)
+	material.set_shader_parameter("blue", blue)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
