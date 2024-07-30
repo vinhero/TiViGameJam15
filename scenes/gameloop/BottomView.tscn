@@ -17,9 +17,9 @@
 [ext_resource type="Script" path="res://scripts/MirrowSpawn.gd" id="13_x87wd"]
 [ext_resource type="Texture2D" uid="uid://dp68jt6flbutc" path="res://img/Flowers2.png" id="14_whgcx"]
 [ext_resource type="Texture2D" uid="uid://gfp1mcfwosom" path="res://img/sprites/ingridients/red.png" id="15_iulk4"]
-[ext_resource type="Texture2D" uid="uid://x3hyhklqp6tl" path="res://img/sprites/ingridients/yellow.png" id="16_4t0fl"]
 [ext_resource type="Script" path="res://scripts/IngriedientsButton.gd" id="17_0cs0d"]
-[ext_resource type="Texture2D" uid="uid://vujomjikou0x" path="res://img/sprites/ingridients/yellow2.png" id="18_8njyj"]
+[ext_resource type="Texture2D" uid="uid://bv24e7nt8hvjx" path="res://img/sprites/ingridients/violet.png" id="17_7xgf0"]
+[ext_resource type="Texture2D" uid="uid://3ym71tyn1nwy" path="res://img/sprites/ingridients/violet2.png" id="18_1txur"]
 [ext_resource type="Texture2D" uid="uid://f3jho85dqiw7" path="res://img/sprites/ingridients/green.png" id="18_nvjq7"]
 [ext_resource type="Texture2D" uid="uid://b3adijfsu1hxu" path="res://img/sprites/ingridients/cyan.png" id="18_yilaj"]
 [ext_resource type="Texture2D" uid="uid://bjatmou5yj2rf" path="res://img/sprites/ingridients/cyan2.png" id="21_g6uaj"]
@@ -247,19 +247,19 @@ offset_bottom = 195.0
 theme_override_constants/h_separation = 40
 columns = 4
 
-[node name="Yellow" type="TextureButton" parent="Buttons"]
+[node name="Violet" type="TextureButton" parent="Buttons"]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 focus_mode = 0
 shortcut = SubResource("Shortcut_rk0f0")
-texture_normal = ExtResource("16_4t0fl")
-texture_hover = ExtResource("18_8njyj")
+texture_normal = ExtResource("17_7xgf0")
+texture_hover = ExtResource("18_1txur")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("17_0cs0d")
 btnType = 3
 
-[node name="Q" type="Label" parent="Buttons/Yellow"]
+[node name="Q" type="Label" parent="Buttons/Violet"]
 layout_mode = 0
 offset_left = 23.0
 offset_top = 59.0

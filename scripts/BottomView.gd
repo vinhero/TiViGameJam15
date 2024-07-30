@@ -11,7 +11,7 @@ var arrMiniEnemieQueue : Array[Enemie]
 @onready var arrHearts = [$Flowers/FlowersHeart, $Flowers/FlowersHeart2, $Flowers/FlowersHeart3, $Flowers/FlowersHeart4, $Flowers2/FlowersHeart4, $Flowers2/FlowersHeart3, $Flowers2/FlowersHeart2, $Flowers2/FlowersHeart]
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Buttons/Yellow.detailed_pressed.connect(onIngridientsPressed)
+	$Buttons/Violet.detailed_pressed.connect(onIngridientsPressed)
 	$Buttons/Blue.detailed_pressed.connect(onIngridientsPressed)
 	$Buttons/Red.detailed_pressed.connect(onIngridientsPressed)
 	$Buttons/Green.detailed_pressed.connect(onIngridientsPressed)

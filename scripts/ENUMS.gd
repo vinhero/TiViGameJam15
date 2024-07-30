@@ -11,7 +11,7 @@ enum Ingridients
 	GREEN,
 	RED,
 	CYAN,
-	YELLOW,
+	VIOLET,
 	NONE
 }
 
