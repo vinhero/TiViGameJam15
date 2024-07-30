@@ -9,7 +9,7 @@ func set_target_position(pos: Vector2):
 	target_position.y += 140
 
 func _ready():
-	scale = Vector2(0.4, 0.4)
+	scale = Vector2(0.5, 0.5)
 
 func _process(delta):
 	global_position = global_position.move_toward(target_position, speed * delta)

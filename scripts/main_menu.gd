@@ -33,4 +33,5 @@ func _on_btn_start_pressed():
 	pass
 
 func _on_btn_tutorial_pressed():
+	SceneSwitcher.switch_scene("res://scenes/tutorial.tscn")
 	pass # Replace with function body.

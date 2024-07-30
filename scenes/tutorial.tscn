@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://garnutw7naf"]
+
+[ext_resource type="Script" path="res://scenes/tutorial.gd" id="1_up8c2"]
+[ext_resource type="Texture2D" uid="uid://cgvb5jsfaodnf" path="res://img/tutorial720p.png" id="1_v3lwu"]
+
+[node name="Tutorial" type="Node2D"]
+script = ExtResource("1_up8c2")
+
+[node name="Tutorial720p" type="Sprite2D" parent="."]
+position = Vector2(640, 360)
+texture = ExtResource("1_v3lwu")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_right = 1281.0
+offset_bottom = 723.0
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
