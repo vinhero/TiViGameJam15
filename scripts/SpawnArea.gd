@@ -23,6 +23,7 @@ signal alchemist_hit
 signal enemie_spawned(enemie: Enemie)
 signal enemie_died(enemie: Enemie)
 signal increase_difficulty
+signal throw_potion_at(eneme: Enemie)
 
 func set_enemies_killed(nKilled: int):
 	enemies_killed = nKilled
@@ -82,10 +83,13 @@ func kill_nearest(queue: Array[int]):
 
 func kill_enemies(enemiesToKill: Array[Node2D]):
 	for enemie in enemiesToKill:
+		
 		if menu == false:
 			set_enemies_killed(enemies_killed + 1)
+		
 		var enemie_to_kill = (enemie.get_child(0) as Enemie)
-		enemie_to_kill.kill()
+		#enemie_to_kill.kill()
+		throw_potion_at.emit(enemie_to_kill)
 		enemie_died.emit(enemie_to_kill)
 		#(enemie.get_child(0) as Enemie).kill()
 

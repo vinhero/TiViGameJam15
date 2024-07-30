@@ -18,4 +18,4 @@ func _ready():
 	pass # Replace with function body.
 
 func _pressed():
-	detailed_pressed.emit(btnType)
+	detailed_pressed.emit(self, btnType)

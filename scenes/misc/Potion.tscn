@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://t268bgueoaty"]
+[gd_scene load_steps=10 format=3 uid="uid://t268bgueoaty"]
 
 [ext_resource type="Script" path="res://scripts/potion.gd" id="1_gsepo"]
 [ext_resource type="Texture2D" uid="uid://uhbft7d1oool" path="res://img/sprites/misc/Potion_Blue__Animation_PNG.png" id="2_g1pay"]
@@ -41,6 +41,8 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1kcok"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pnkem"]
+
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_gsepo")
 
@@ -49,3 +51,10 @@ sprite_frames = SubResource("SpriteFrames_6ned1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_1kcok")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_pnkem")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

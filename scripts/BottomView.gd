@@ -51,7 +51,7 @@ func update_mini_spawns():
 			#area.set_enemie(arrMiniEnemieQueue[index])
 			#area.set_mini_enemie(area.spawnPosition)
 
-func onIngridientsPressed(type: int):
+func onIngridientsPressed(btn: IngridientsButton, type: int):
 	arrCurrentQueue.append(type)
 	#$QueueBar.set_queue(arrCurrentQueue)
 	if (arrCurrentQueue.size() == 3):
@@ -61,7 +61,13 @@ func onIngridientsPressed(type: int):
 		clear_boiler()
 	else:
 		for index in arrCurrentQueue.size():
-			$AnimatedSprite2D.material.set_shader_parameter("COLOR" + str(index+1), Color(ENUMS.Ingridients.find_key(arrCurrentQueue[index])))
+			var strColorName = ENUMS.Ingridients.find_key(arrCurrentQueue[index])
+			$AnimatedSprite2D.material.set_shader_parameter("COLOR" + str(index+1), Color(strColorName))
+	var sprite2d = FlyingIngridient.new()
+	sprite2d.set_target_position($AnimatedSprite2D.global_position)
+	sprite2d.texture = btn.texture_normal
+	sprite2d.global_position = btn.get_children()[0].global_position
+	get_parent().add_child(sprite2d)
 
 func clear_boiler():
 	arrCurrentQueue.clear()

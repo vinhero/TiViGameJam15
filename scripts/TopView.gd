@@ -25,6 +25,8 @@ func _on_spawner_enemie_spawned(enemie: Enemie):
 func _on_spawner_enemie_died(enemie: Enemie):
 	enemie_died.emit(enemie)
 
-
 func _on_spawner_increase_difficulty():
 	difficulty_increased.emit()
+
+func _on_spawner_throw_potion_at(enemie):
+	$Alchemist.throw_potion_at(enemie)

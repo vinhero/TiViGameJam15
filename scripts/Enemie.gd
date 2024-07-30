@@ -51,6 +51,10 @@ func kill():
 	animation = DIE_ANIMATION
 	z_index = 1000
 
+func kill_external():
+	kill()
+	has_died.emit(self, true)
+
 func attack():
 	speed = 0
 	attacked_alchemist.emit()

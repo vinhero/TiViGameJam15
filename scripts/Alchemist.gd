@@ -34,7 +34,6 @@ func _process(delta):
 	pass
 
 func throw_potion_at(target: Enemie):
-	Input.action_press("Kill Enemie")
 	var thrown_potion = potion.instantiate() 
 	thrown_potion.set_target(target)
 	thrown_potion.position = $PotionThrower/CollisionShape2D.global_position
