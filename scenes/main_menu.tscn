@@ -1,8 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://cnp2eaodeq37t"]
+[gd_scene load_steps=11 format=3 uid="uid://cnp2eaodeq37t"]
 
 [ext_resource type="PackedScene" uid="uid://cnvfcqqhax6hi" path="res://scenes/gameloop/TopView.tscn" id="1_hbgqk"]
-[ext_resource type="Script" path="res://scenes/main_menu.gd" id="1_yicp2"]
-[ext_resource type="PackedScene" uid="uid://yk0xwhddtvdv" path="res://scenes/gameloop/GameLoop.tscn" id="2_g8mo7"]
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_yicp2"]
 [ext_resource type="AudioStream" uid="uid://bu4dftn4kigvw" path="res://music/PotionthrowerV2.mp3" id="3_3ayja"]
 [ext_resource type="Texture2D" uid="uid://bqg3m0gek0w3p" path="res://img/btnStart.PNG" id="5_xduu2"]
 [ext_resource type="Texture2D" uid="uid://12faioxrfgq6" path="res://img/btnStartHover.png" id="6_kcls4"]
@@ -16,7 +15,6 @@ size = Vector2(162, 541)
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_yicp2")
-game_loop_scene = ExtResource("2_g8mo7")
 
 [node name="TopView" parent="." instance=ExtResource("1_hbgqk")]
 position = Vector2(-3789, -42)

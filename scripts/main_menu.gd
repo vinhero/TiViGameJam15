@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var game_loop_scene : PackedScene
+#@export var game_loop_scene : PackedScene
 
 @onready var top_view = $TopView
 
@@ -28,8 +28,9 @@ func _on_delete_area_area_entered(area):
 
 func _on_btn_start_pressed():
 	#print(get_children())
-	SceneSwitcher.switch_scene(game_loop_scene.resource_path)
+	SceneSwitcher.switch_scene("res://scenes/gameloop/GameLoop.tscn")
 	#get_tree().change_scene_to_packed(game_loop_scene)
+	pass
 
 func _on_btn_tutorial_pressed():
 	pass # Replace with function body.

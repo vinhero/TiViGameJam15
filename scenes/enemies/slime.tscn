@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://cnajj2yspbpyn"]
 
 [ext_resource type="Texture2D" uid="uid://cm3tru3k71n5s" path="res://img/sprites/entities/Enemie_Slime_WhiteWalk_and_Dead_Animation2.4.png" id="1_itj8u"]
-[ext_resource type="Shader" path="res://scenes/enemies/slime.gdshader" id="1_xawrj"]
+[ext_resource type="Shader" path="res://scripts/shader/slime.gdshader" id="1_xawrj"]
 [ext_resource type="Texture2D" uid="uid://cw2pm6cau640q" path="res://img/sprites/entities/Enemie_Slime_WhiteWalk_and_Dead_Animation2.5.png" id="2_r5cxm"]
 [ext_resource type="Texture2D" uid="uid://dxfrtgk2311fh" path="res://img/sprites/entities/Enemie_Slime_WhiteWalk_and_Dead_Animation2.0.png" id="3_gww4u"]
 [ext_resource type="Texture2D" uid="uid://ddpirf7bk8jlo" path="res://img/sprites/entities/Enemie_Slime_WhiteWalk_and_Dead_Animation2.1.png" id="4_a5ps1"]

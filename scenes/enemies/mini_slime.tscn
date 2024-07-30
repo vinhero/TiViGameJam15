@@ -1,13 +1,13 @@
 [gd_scene load_steps=9 format=3 uid="uid://takgxcjfoiuj"]
 
+[ext_resource type="Shader" path="res://scripts/shader/slime.gdshader" id="1_awmc6"]
 [ext_resource type="Texture2D" uid="uid://b37i5c7uxcbpr" path="res://img/Mini_Mirror_Slime.png" id="1_idqh5"]
-[ext_resource type="Shader" path="res://scenes/enemies/slime.gdshader" id="1_n2w2k"]
 [ext_resource type="Texture2D" uid="uid://dch4krbqsqhx7" path="res://img/Spiegel_Ball.png" id="2_cnqpa"]
-[ext_resource type="Script" path="res://scenes/enemies/mini_slime.gd" id="2_srblh"]
+[ext_resource type="Script" path="res://scripts/mini_slime.gd" id="3_tyvsk"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6u7mv"]
 resource_local_to_scene = true
-shader = ExtResource("1_n2w2k")
+shader = ExtResource("1_awmc6")
 shader_parameter/red = null
 shader_parameter/green = null
 shader_parameter/blue = null
@@ -40,7 +40,7 @@ scale = Vector2(4.0625, 4.0625)
 sprite_frames = SubResource("SpriteFrames_vxwp5")
 autoplay = "default"
 frame_progress = 0.635331
-script = ExtResource("2_srblh")
+script = ExtResource("3_tyvsk")
 
 [node name="Ball1" type="Sprite2D" parent="."]
 position = Vector2(10.0923, -6.8923)
